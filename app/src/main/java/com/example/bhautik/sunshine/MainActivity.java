@@ -1,45 +1,49 @@
 package com.example.bhautik.sunshine;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
-public class MainActivity extends AppCompatActivity {
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+    ViewGroup _root;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+         _root = (ViewGroup) findViewById(R.id.root);
 
-        final TextView xCoord = (TextView) findViewById(R.id.textView1);
-        final TextView yCoord = (TextView) findViewById(R.id.textView2);
-        final Button button = (Button) findViewById(R.id.button);
-        final View touchView = findViewById(R.id.button);
-        touchView.setOnTouchListener(new View.OnTouchListener() {
+        Button _view = new Button(this);
+        _view.setText("my button.");
 
-            public boolean onTouch(View v, MotionEvent event) {
-                final int action = event.getAction();
-                switch (action & MotionEvent.ACTION_MASK) {
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(150, 50);
+        layoutParams.leftMargin = 50;
+        layoutParams.topMargin = 50;
+        layoutParams.bottomMargin = -250;
+        layoutParams.rightMargin = -250;
+        _view.setLayoutParams(layoutParams);
 
-                    case MotionEvent.ACTION_DOWN: {
-                        button.setX(Float.parseFloat((String.valueOf((int) event.getY()))));
-                        yCoord.setText(String.valueOf((int) event.getY()));
-                        break;
-                    }
+        _view.setOnTouchListener(this);
+        _root.addView(_view);
+    }
 
-                    case MotionEvent.ACTION_MOVE:{
-                        button.setX(Float.parseFloat(String.valueOf((int) event.getY())));
-                        yCoord.setText(String.valueOf((int) event.getY()));
-                        xCoord.setText(String.valueOf((int) event.getX()));
-                        break;
-                    }
-                }
-                return true;
-
-            }
-
-        });
+    public boolean onTouch(View view, MotionEvent event) {
+        final int X = (int) event.getRawX();
+        final int Y = (int) event.getRawY();
+        int _xDelta = 0 ;
+        switch (event.getAction() & MotionEvent.ACTION_MASK) {
+            case MotionEvent.ACTION_MOVE:
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+                layoutParams.leftMargin = X - _xDelta;
+                view.setLayoutParams(layoutParams);
+                break;
+        }
+        _root.invalidate();
+        return true;
     }
 }
+
