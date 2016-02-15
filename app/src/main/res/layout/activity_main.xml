@@ -11,31 +11,12 @@
     tools:context="com.example.bhautik.sunshine.MainActivity"
     android:background="#362fbb">
 
-    <!--<Button
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="53dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:width="250dp"
-        android:textSize="25dp"
-        android:id="@+id/textView1"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/button" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView2"
-        android:textSize="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textView1" />-->
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
