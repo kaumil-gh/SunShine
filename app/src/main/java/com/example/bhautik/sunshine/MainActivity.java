@@ -10,7 +10,8 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+public class
+        MainActivity extends AppCompatActivity implements View.OnTouchListener {
     ViewGroup _root;
 
     ImageButton imageButton;
