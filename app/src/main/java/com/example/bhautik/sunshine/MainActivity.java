@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+public class
+        MainActivity extends AppCompatActivity implements View.OnTouchListener {
     ViewGroup _root;
 
     Button button ;
