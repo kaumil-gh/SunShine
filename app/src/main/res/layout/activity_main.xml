@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.bhautik.sunshine.MainActivity"
-    android:background="#362fbb">
+    android:background="#1648ec">
 
 
     <GridLayout
@@ -78,7 +78,5 @@
         android:layout_marginLeft="252dp"
         android:layout_marginRight="252dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="false" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
