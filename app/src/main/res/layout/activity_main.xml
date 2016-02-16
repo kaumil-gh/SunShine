@@ -9,21 +9,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.bhautik.sunshine.MainActivity"
-    android:background="#e2f10b">
+    android:background="#362fbb">
 
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:text="Slider"
-        android:id="@+id/slider"
-        android:backgroundTint="#db1818"
-        android:clickable="false"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-=======
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/gridLayout">
@@ -90,5 +81,4 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentLeft="false"
         android:layout_alignParentTop="false" />
->>>>>>> refs/remotes/origin/master
 </RelativeLayout>
